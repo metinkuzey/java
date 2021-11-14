@@ -52,5 +52,29 @@ public class Main {
         System.out.println(numbersArray1[0]);
         System.out.println("Because reference variables hold the address of object, " +
                 "so numbersArray1 value is equal 199");
+        System.out.println("Primitive Types hold in Stack memory, Reference type hold in Stack and Heap memory");
+        System.out.println("         Stack Memory                              Heap Memory");
+        System.out.println("        numbersArrays1  ----------------> addr:101 1,2,3,4,5 ");
+        System.out.println("        numbersArrays2  ----------------> addr:102 10,20,30,40,50 ");
+        System.out.println("numbersArray1 = numbersArray2 is mean that numbersArrays heap address updated to addr:102" +
+                " so numbersArray has values in addr:102");
+        System.out.println("         Stack Memory                              Heap Memory");
+        System.out.println("        numbersArrays1  ----------------> addr:102 10,20,30,40,50 ");
+        System.out.println("        numbersArrays2  ----------------> addr:102 10,20,30,40,50 ");
+        System.out.println("numbersArray2[0] = 199; after this process ");
+        System.out.println("         Stack Memory                              Heap Memory");
+        System.out.println("        numbersArrays1  ----------------> addr:102 199,20,30,40,50 ");
+        System.out.println("        numbersArrays2  ----------------> addr:102 199,20,30,40,50 ");
+        System.out.println("********************************************");
+        System.out.println("Trick point of String Variables");
+        String city1 = "London";
+        String city2 = "Liverpool";
+        city1 = city2;
+        city2 = "Rome";
+        System.out.println(city1);
+        System.out.println("Special case for String equalization");
+        System.out.println("Because of in Java and C#, using String, the value stores in char arrays so it is primitive type" +
+                " and city1 = city2 result is Liverpool, because of primitive types hold own values and equalization of to string " +
+                "means that first string get the new value which is second's value ");
     }
 }
